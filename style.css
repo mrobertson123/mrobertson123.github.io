@@ -46,7 +46,7 @@ a {
 
 /* main container area beneath menu */
 main {
-    background: #2CAEFE;
+    background: #00000000
     display: flex;
     margin-top: 20px;
 }
