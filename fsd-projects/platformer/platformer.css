@@ -1,10 +1,15 @@
 body {
+  background-color: #87CEEB;
   margin: 0px;
 }
 
 canvas {
-  background-color: lightblue;
-  margin: 20px;
+  background-color: rgb(235, 83, 83);
+  background-image: url(https://images5.alphacoders.com/129/1292802.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 50px;
 }
 
 img {
