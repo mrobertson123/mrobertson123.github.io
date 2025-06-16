@@ -39,11 +39,22 @@ var background = function (window) {
             // TODO 1:
             // this currently fills the background with an obnoxious yellow;
             // you should modify both the height and color to suit your game
-            var backgroundFill = draw.rect(canvasWidth,canvasHeight,'yellow');
+            var backgroundFill = draw.rect(canvasWidth,canvasHeight,'red');
             background.addChild(backgroundFill);
+            background.addChild(moon);
             
             // TODO 2: - Add a moon and starfield
-            
+            var moon = draw.bitmap('img/moon.png');
+            moon.x = canvasWidth - 776;
+            moon.y = canvasHeight - 900;
+            moon.scaleX = 1;
+            moon.scaleY = 1;
+            background.addChild(moon);
+
+            var circle = draw.circle(10, "white", "LightGray", 2);
+            circle.x = canvasWidth * Math.random();
+            circle.y = groundY * Math.random();
+            background.addChild(circle);
             
             // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
             
@@ -66,7 +77,8 @@ var background = function (window) {
             
             
             // TODO 4: Part 2 - Parallax
-            
+            for(var i = 0; i < 5; i++);
+
 
         } // end of update function - DO NOT DELETE
         
