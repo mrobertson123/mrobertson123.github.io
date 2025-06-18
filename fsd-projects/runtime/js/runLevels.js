@@ -20,7 +20,7 @@ var runLevels = function (window) {
     // BEGIN EDITING YOUR CODE HERE
     
     function createSawBlade(x, y, damage){
-      var hitZoneSize = 25;
+      var hitZoneSize = 30;
       var damageFromObstacle = damage;
       var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
       sawBladeHitZone.x = x;
@@ -34,13 +34,13 @@ var runLevels = function (window) {
       sawBladeHitZone.addChild(obstacleImage);
     }
 
-    function createEnemy(x, y, speed){
+    function createEnemy(x, y, speed, image, offsetX, offsetY, scale){
       var enemy = game.createGameItem("enemy", 5);
-      var redSquare = draw.bitmap("img/horry.png");
-      redSquare.x = -25;
-      redSquare.y = -30;
-      redSquare.scaleX = 0.4;
-      redSquare.scaleY = 0.4;
+      var redSquare = draw.bitmap(image);
+      redSquare.x = offsetX;
+      redSquare.y = offsetY;
+      redSquare.scaleX = scale;
+      redSquare.scaleY = scale;
       enemy.addChild(redSquare);
       enemy.x = x;
       enemy.y = y;
@@ -50,7 +50,7 @@ var runLevels = function (window) {
           game.changeIntegrity(-10);
         };
       enemy.onProjectileCollision = function (){
-          game.increaseScore(100);
+          game.increaseScore(200);
           //enemy.fadeOut();
           enemy.shrink();
           //enemy.flyTo(0,0);
@@ -78,9 +78,11 @@ var runLevels = function (window) {
 
     function createMarker(x, y, speed){
       var marker = game.createGameItem("marker", 25);
-      var yellowSquare = draw.rect(50, 50, "pink");
+      var yellowSquare = draw.bitmap("img/flag.png")
       yellowSquare.x = -25;
       yellowSquare.y = -25;
+      yellowSquare.scaleX = 0.2;
+      yellowSquare.scaleY = 0.2;
       marker.addChild(yellowSquare);
       marker.x = x;
       marker.y = y;
@@ -110,7 +112,7 @@ var runLevels = function (window) {
         }
 
         if(element.type === "enemy"){
-          createEnemy(element.x, element.y, element.speed);
+          createEnemy(element.x, element.y, element.speed, element.image, element.offetX, element.offsetY, element.scale);
         }
 
         if(element.type === "reward"){

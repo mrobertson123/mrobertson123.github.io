@@ -39,7 +39,7 @@ var background = function (window) {
             // TODO 1:
             // this currently fills the background with an obnoxious yellow;
             // you should modify both the height and color to suit your game
-            var backgroundImage = draw.bitmap("img/blood.png");
+            var backgroundImage = draw.bitmap("img/mortal.png");
             backgroundImage.x = 0;
             backgroundImage.y = 0;
             backgroundImage.scaleX = canvasWidth / backgroundImage.image.width; // Scale to canvas width
@@ -62,8 +62,8 @@ var background = function (window) {
             moon.scaleY = 0.5;
             background.addChild(moon);
             // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
-            for (var i = 0; i < 7; ++i) {
-                var buildingColors = ["red", "blue", "red", "silver", "red", "white", "silver"];
+            for (var i = 0; i < 6; ++i) {
+                var buildingColors = ["red", "blue", "red", "silver", "red", "white",];
                 var buildingHeight = 700 * Math.random();
                 var building = draw.rect(75, buildingHeight, buildingColors[i], "Black", 0.5);
                 building.x = 350 * i;
