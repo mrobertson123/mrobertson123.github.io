@@ -27,8 +27,8 @@ var makeLevelData = function (window) {
           { type: "enemy", x: 1400, y: groundY - 50, speed: -2, damage: 10, image: "img/roster (1).png", offsetX: -35, offsetY: -25, scale: 0.5},
           { type: "enemy", x: 1500, y: groundY - 50, speed: -2, damage: 10, image: "img/horry.png", offsetX: -35, offsetY: -25, scale: 0.5},
           { type: "enemy", x: 1685, y: groundY - 50, speed: -2, damage: 10, image: "img/horry.png", offsetX: -35, offsetY: -25, scale: 0.5},
-          { type: "reward", x: 1285, y: groundY - 135, speed: -2},
-          { type: "marker", x: 1800, y: groundY - 75, speed: -2},
+          { type: "reward", x: 1500, y: groundY - 135, speed: -2},
+          { type: "marker", x: 2000, y: groundY - 75, speed: -2},
         ],
       },
       {
@@ -51,7 +51,7 @@ var makeLevelData = function (window) {
           { type: "enemy", x: 1400, y: groundY - 50, speed: -2, damage: 10, image: "img/roster (1).png", offsetX: -35, offsetY: -25, scale: 0.5},
           { type: "enemy", x: 1500, y: groundY - 50, speed: -2, damage: 10, image: "img/roster (1).png", offsetX: -35, offsetY: -25, scale: 0.5},
           { type: "reward", x: 1800, y: groundY - 125, speed: -3, damage: 10},
-          { type: "marker", x: 1900, y: groundY - 75, speed: -3},
+          { type: "marker", x: 1900, y: groundY - 130, speed: -3},
 
         ],
       },
